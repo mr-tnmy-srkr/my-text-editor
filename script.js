@@ -58,18 +58,22 @@ function changeFontSize() {
 // uppercase, lowercase
 
 document.getElementById("uppercase-li").addEventListener("click", () => {
-  sentence.value = sentence.value.toUpperCase();
+  sentence.classList.remove("lowercase","capitalize")
+  sentence.classList.add("uppercase");
+  // addBtnClassList("uppercase-li")
+  // sentence.value = sentence.value.toUpperCase();
 });
 document.getElementById("lowercase-li").addEventListener("click", () => {
-  // sentence.classList.add("lowercase");
-  sentence.value = sentence.value.toLowerCase();
-  sentence.classList.remove("capitalize")
+  sentence.classList.remove("capitalize","uppercase")
+  sentence.classList.add("lowercase");
+  // addBtnClassList("lowercase-li")
+  // sentence.value = sentence.value.toLowerCase();
 });
 document.getElementById("capitalize-li").addEventListener("click", () => {
-  // sentence.classList.add("capitalize");
-  sentence.value.style.textTransform = 'capitalize';
-  addBtnClassList("capitalize-li")
-  // sentence.value = sentence.value.toUpperCase();
+  sentence.classList.remove("lowercase","uppercase")
+  sentence.classList.add("capitalize");
+  // addBtnClassList("capitalize-li")
+  // sentence.value.style.textTransform = 'capitalize';
 });
 
 // text color
