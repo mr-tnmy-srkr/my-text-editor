@@ -84,7 +84,7 @@
               <!-- font size, uppercase/lowercase and text color -->
               <div class="rounded-lg flex justify-center items-center ">
   
-                <input class="w-11 text-xl bg-blue-200 font-semibold rounded-lg focus:bg-blue-500 focus:ring focus:rounded-lg" id="font-size" type="number" value="16" min="1" max="100" onchange="changeFontSize()">
+                <input id="font-size" onchange="changeFontSize()" class="w-11 text-xl bg-blue-200 font-semibold rounded-lg focus:bg-blue-500 focus:ring focus:rounded-lg" type="number" value="16" min="1" max="100">
                 </button>
                 <button id='text-transform' onclick="transformText()" class="focus:bg-blue-500 focus:ring focus:rounded-lg text-xl py-1 px-3">
                   <span class="font-semibold">aA</span>
@@ -93,6 +93,7 @@
   
               </div>
             </div>
+             
              
             <!-- textarea -->
             <div class="mt-5" spellcheck="false">
@@ -110,6 +111,7 @@
         </div>
       </section>
   
+      <script src="./utility.js"></script>
       <script src="./script.js"></script>
 </body>
 </html>

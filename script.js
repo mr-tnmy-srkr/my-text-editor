@@ -36,22 +36,19 @@ function textAlignJustify(data) {
     addBtnClassList("text-justify");
   sentence.classList.toggle("text-justify");
 }
+// to change font size
+ function changeFontSize() {
+  const fontNumber = document.getElementById("font-size");
+  const value = fontNumber.value;
+  sentence.style.fontSize = value + "px";
+} 
 
-// common function
-function addBtnClassListWithToggle(id) {
-  document.getElementById(id).classList.toggle("bg-blue-500");
-}
+// or
 
-function addBtnClassList(id) {
-    document.getElementById(id).classList.toggle("bg-blue-500");
-  }
+/* document.getElementById("font-size").addEventListener('change',function(){
+  const fontNumber = document.getElementById("font-size");
+  const value = fontNumber.value;
+  sentence.style.fontSize = value + "px";
+}); */
 
-function removeClassList(id1,id2,id3) {
-    document.getElementById(id1).classList.remove("bg-blue-500","active");
-    document.getElementById(id2).classList.remove("bg-blue-500","active");
-    document.getElementById(id3).classList.remove("bg-blue-500","active");
-    sentence.classList.remove(id1,id2,id3);
-    /* console.log(id1)
-    console.log(id2)
-    console.log(id3) */
-  }
+// uppercase, lowercase
