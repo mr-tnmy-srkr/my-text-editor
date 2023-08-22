@@ -1,7 +1,9 @@
 // Globally declared the textarea
+
 const sentence = document.getElementById("editor");
 
 // for bold,italic and underline
+
 function formatText(type) {
   if (type == "font-bold") {
     sentence.classList.toggle(type);
@@ -16,6 +18,7 @@ function formatText(type) {
 }
 
 // for text: left, right, center and justify
+
 function textAlignLeft(data) {
   removeClassList("text-center", "text-right", "text-justify");
   addBtnClassList("text-left");
@@ -37,6 +40,7 @@ function textAlignJustify(data) {
   sentence.classList.toggle("text-justify");
 }
 // to change font size
+
 function changeFontSize() {
   const fontNumber = document.getElementById("font-size");
   const value = fontNumber.value;
@@ -52,15 +56,26 @@ function changeFontSize() {
 });  */
 
 // uppercase, lowercase
-function transformText() {
-  /* if (
-    sentence.style.textTransform == "lowercase" ||
-    sentence.style.textTransform == "capitalize"
-  ) { */
-  if(sentence.style.textTransform == "capitalize"){
-    sentence.style.textTransform = 'none'
-  }
-    sentence.classList.toggle("uppercase");
-  // } 
-  
+
+document.getElementById("uppercase-li").addEventListener("click", () => {
+  sentence.value = sentence.value.toUpperCase();
+});
+document.getElementById("lowercase-li").addEventListener("click", () => {
+  // sentence.classList.add("lowercase");
+  sentence.value = sentence.value.toLowerCase();
+  sentence.classList.remove("capitalize")
+});
+document.getElementById("capitalize-li").addEventListener("click", () => {
+  // sentence.classList.add("capitalize");
+  sentence.value.style.textTransform = 'capitalize';
+  addBtnClassList("capitalize-li")
+  // sentence.value = sentence.value.toUpperCase();
+});
+
+// text color
+
+function pickColor(){
+ const picker = document.getElementById("pick-color");
+const pickedColor = picker.value;
+sentence.style.color = pickedColor;
 }
