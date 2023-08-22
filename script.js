@@ -17,31 +17,31 @@ function formatText(type) {
 
 // for text: left, right, center and justify
 function textAlignLeft(data) {
-    removeClassList("text-center","text-right","text-justify")
-    addBtnClassList("text-left");
+  removeClassList("text-center", "text-right", "text-justify");
+  addBtnClassList("text-left");
   sentence.classList.toggle("text-left");
 }
 function textAlignCenter(data) {
-    removeClassList("text-left","text-right","text-justify")
-    addBtnClassList("text-center");
+  removeClassList("text-left", "text-right", "text-justify");
+  addBtnClassList("text-center");
   sentence.classList.toggle("text-center");
 }
 function textAlignRight(data) {
-    removeClassList("text-left","text-center","text-justify")
-    addBtnClassList("text-right");
+  removeClassList("text-left", "text-center", "text-justify");
+  addBtnClassList("text-right");
   sentence.classList.toggle("text-right");
 }
 function textAlignJustify(data) {
-    removeClassList("text-left","text-center","text-right")
-    addBtnClassList("text-justify");
+  removeClassList("text-left", "text-center", "text-right");
+  addBtnClassList("text-justify");
   sentence.classList.toggle("text-justify");
 }
 // to change font size
- function changeFontSize() {
+function changeFontSize() {
   const fontNumber = document.getElementById("font-size");
   const value = fontNumber.value;
   sentence.style.fontSize = value + "px";
-} 
+}
 
 // or
 
@@ -49,6 +49,18 @@ function textAlignJustify(data) {
   const fontNumber = document.getElementById("font-size");
   const value = fontNumber.value;
   sentence.style.fontSize = value + "px";
-}); */
+});  */
 
 // uppercase, lowercase
+function transformText() {
+  /* if (
+    sentence.style.textTransform == "lowercase" ||
+    sentence.style.textTransform == "capitalize"
+  ) { */
+  if(sentence.style.textTransform == "capitalize"){
+    sentence.style.textTransform = 'none'
+  }
+    sentence.classList.toggle("uppercase");
+  // } 
+  
+}
