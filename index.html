@@ -16,15 +16,15 @@
 
 <body class="">
   <section>
-    <div id="sample" class="bg-blue-400 container mx-auto w-3/4 mt-10 pb-5 mb-5 shadow-2xl rounded-lg">
+    <div id="sample" class="bg-blue-400 container mx-auto w-11/12 lg:w-3/4 my-5 pb-5 shadow-2xl rounded-lg">
       <h1 class="font-mono text-2xl md:text-4xl font-bold text-center py-5">
         My Text Editor
       </h1>
       <div class="bg-blue-200 border-2 rounded-xl border-black container mx-auto w-3/4 mb-5 p-5">
-        <div class="grid md:grid-cols-3 md:gap-4 border-b-2 border-black pb-5">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 md:gap-4 border-b-2 border-black pb-5">
 
           <!-- bold,italic and underline -->
-          <div class="rounded-lg flex items-center gap-1">
+          <div class="rounded-lg flex  items-center gap-1">
             <button id="bold-btn" type="button" onclick="formatText('font-bold')" class="py-1 px-3">
               <i class="fa-solid fa-bold"></i>
             </button>
@@ -52,24 +52,24 @@
           </div>
 
           <!-- font size, uppercase/lowercase and text color -->
-          <div class="rounded-lg flex justify-end items-center gap-2">
+          <div class="rounded-lg flex ml-3 lg:justify-end items-center lg:gap-2">
             <button>
               <input id="font-size" onchange="changeFontSize()"
-                class="w-11 text-xl bg-blue-200 font-semibold rounded-lg focus:bg-blue-500 focus:ring focus:rounded-lg"
+                class="w-11 text-xl bg-blue-200 font-semibold focus:bg-blue-500"
                 type="number" value="16" min="1" max="100">
             </button>
 
             <button>
               <details class="dropdown">
-                <summary class=" btn capitalize text-xl mr-2">Aa</summary>
-                <ul class="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-35">
+                <summary class="capitalize text-xl bg-blue-200 border-none hover:bg-none">Aa</summary>
+                <ul class="p-1 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-35">
                   <li id="uppercase-li"><a>UPPERCASE</a></li>
                   <li id="lowercase-li"><a>lowercase</a></li>
                   <li id="capitalize-li"><a>Capitalize</a></li>
                 </ul>
               </details>
             </button>
-       
+
             <input id="pick-color" type="color" class="focus:bg-blue-500 focus:ring focus:rounded-lg ml-3"
               onchange="pickColor()">
 
